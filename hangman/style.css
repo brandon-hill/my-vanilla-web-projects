@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #34495e;
+  background-color: #1c2f3f;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -57,7 +57,7 @@ h1 {
 .word {
   display: flex;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -68,13 +68,13 @@ h1 {
   font-size: 30px;
   align-items: center;
   justify-content: center;
-  margin: 0 3px;
+  margin: 0 4px;
   height: 50px;
-  width: 20px;
+  width: 30px;
 }
 
 .popup-container {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -88,7 +88,7 @@ h1 {
 .popup {
   background: #2980b9;
   border-radius: 5px;
-  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.2);
   padding: 20px;
   text-align: center;
 }
@@ -98,9 +98,10 @@ h1 {
   background-color: #fff;
   color: #2980b9;
   border: 0;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 12px 20px;
-  font-size: 16px;
+  font-weight: bold;
 }
 
 .popup button:active {
@@ -113,7 +114,7 @@ h1 {
 
 .notification-container {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px;
   padding: 15px 20px;
   position: absolute;
   bottom: -50px;
