@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['application', 'programming', 'interface', 'wizard', 'javascript', 'website', 'stylesheet', 'language', 'variable', 'console', 'dynamic', 'element']
+const words = ['application', 'programming', 'interface', 'wizard', 'javascript', 'website', 'stylesheet', 'language', 'variable', 'console', 'dynamic', 'element', 'development', 'coding', 'keyboard', '']
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -32,7 +32,7 @@ function displayWord() {
   const innerWord = wordEl.innerText.replace(/\n/g, '');
 
   if(innerWord === selectedWord) {
-    finalMessage.innerText = 'You won!';
+    finalMessage.innerText = 'You won! 😁';
     popup.style.display = 'flex';
   }
 }
@@ -42,7 +42,7 @@ function updateWrongLettersEl() {
   // Display wrong letters
   wrongLettersEl.innerHTML = `
     ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
-    ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+    ${wrongLetters.map(letter => `<span> ${letter}</span>`)}
   `;
 
   // Display parts
@@ -58,7 +58,7 @@ function updateWrongLettersEl() {
 
   // Check if lost
   if(wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = 'You lost';
+    finalMessage.innerText = 'You lost... 😔';
     popup.style.display = 'flex';
   }
 }
