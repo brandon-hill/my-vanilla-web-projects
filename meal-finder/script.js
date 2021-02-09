@@ -26,12 +26,14 @@ function searchMeal(e) {
         resultHeading.innerHTML = `<p>There are no results, try a different keyword.</p>`
       } else {
         mealsEl.innerHTML = data.meals.map(meal => `
-          <div class="meal">
-            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-            <div class="meal-info" data-mealid="${meal.idMeal}">
-              <h3>${meal.strMeal}</h3>
+          <a href="#single-meal">  
+            <div class="meal">
+              <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+              <div class="meal-info" data-mealid="${meal.idMeal}">
+                <h3>${meal.strMeal}</h3>
+              </div>
             </div>
-          </div>
+          </a>
         `)
         .join('');
       }
